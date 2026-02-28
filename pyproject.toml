@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orwox-neural"
+version = "0.1.0"
+description = "A production-ready yet educational neural network framework"
+authors = [{name = "Orwox Team"}]
+urls = { "Repository" = "https://github.com/orwoxdev/nerual" }
+dependencies = [
+    "numpy",
+]
+requires-python = ">=3.7"
+
+[tool.setuptools.packages.find]
+where = ["src"]
