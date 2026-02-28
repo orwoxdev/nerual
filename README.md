@@ -23,6 +23,37 @@ pip install orwox-neural
 
 Or simply copy `orwoxNeural.py` into your project.
 
+## How to Publish to PyPI (Public Library)
+
+To make this a public library available via `pip install`, follow these steps:
+
+1. **Install Build Tools**:
+   ```bash
+   pip install --upgrade build twine
+   ```
+
+2. **Build the Package**:
+   ```bash
+   python3 -m build
+   ```
+   This will create a `dist/` directory with `.whl` and `.tar.gz` files.
+
+3. **Check the Package**:
+   ```bash
+   twine check dist/*
+   ```
+
+4. **Upload to TestPyPI (Optional but recommended)**:
+   ```bash
+   twine upload --repository testpypi dist/*
+   ```
+
+5. **Upload to PyPI**:
+   ```bash
+   twine upload dist/*
+   ```
+   *Note: You will need a PyPI account and an API token.*
+
 ## Quick Start
 
 ```python
